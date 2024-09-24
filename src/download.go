@@ -11,6 +11,9 @@ import (
 func DownloadFiles(img image.Image, art []string,fileName string ) (string,error) {
 
 	outputFileName := strings.Split(fileName,".")[0]
+	if outputFileName == ""{
+		return "", fmt.Errorf(" Error: empty file name")
+	}
 	outputFileTxt, err := os.Create(outputFileName + ".txt")
 	if err != nil {
 		fmt.Println("Error creating txt file", err)
