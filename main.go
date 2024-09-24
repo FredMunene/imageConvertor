@@ -20,7 +20,7 @@ func main() {
 	}
 	defer file.Close()
 
-	img, art, err := src.GetAsciiArt(file)
+	img, art, err := src.GetArt(file)
 	if err != nil {
 		fmt.Println(err)
 		return

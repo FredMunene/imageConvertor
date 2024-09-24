@@ -9,7 +9,7 @@ import (
 
 const asciiChars = "@%#*+=-:. "
 
-func GetAsciiArt(file *os.File) (image.Image, []string, error) {
+func GetArt(file *os.File) (image.Image, []string, error) {
 	img, err := jpeg.Decode(file)
 	if err != nil {
 		return nil, nil, err
